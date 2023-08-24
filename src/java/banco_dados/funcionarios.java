@@ -128,7 +128,7 @@ public class funcionarios {
 //--------------------------------------------------------------------------------------
 
     //METODO ALTERAR REGISTRO
-    public boolean alterarRegistros(c_funcionarios funcionario) {
+    public boolean alterarRegistro(c_funcionarios funcionario) {
         conversao Converter = new conversao();
         Date dtDataNascimento;
         String strDataInvertida, strComandoSQL;
