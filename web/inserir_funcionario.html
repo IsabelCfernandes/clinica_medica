@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>SGC - Versão 1.0</title>
+        <link href="clinica_medica.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <body class="FundoPagina">
+        <p class="TituloAplicacao">SGC - Sistema de Gestão de Clínicas 1.0</p>
+        <p class="TituloPagina">Cadastro de Funcionários - Inserção</p>
+
+
+        <form name="formInsereFuncionario" method="post" action="inserirFuncionario" target="_parent">
+            <p>
+                Nome do funcionário:
+                <input type="text" name="txtNomeFuncionario" size= "50" maxlength="50" autofocus />
+            </p>
+            <p>Data de nascimento (dd/mm/aaaa):
+                <input type="text" name="txtDiaNascimento" size="2" maxlength="2" /> /
+                <input type="text" name="txtMesNascimento" size="2" maxlength="2" /> /
+                <input type="text" name="txtAnoNascimento" size="4" maxlength="4" /> 
+            </p>
+            <p>Sexo:
+                <input type="radio" name="rbSexo" value="M"/> Masculino
+                <input type="radio" name="rbSexo" value="F"/> Feminino
+            </p>
+
+            <p>Numero RG:
+                <input type="text" name="txtRG" size="12" maxlength="12" />
+            </p>
+            <p>Orgão Emissor:
+                <input type="text" name="txtOrgaoEmissor" size="6" maxlength="6" />
+            </p>
+            <p>Numero CPF:
+                <input type="text" name="txtCPF" size="14" maxlength="14" />
+            </p>
+            <p>Endereço/Numero:
+                <input type="text" name="txtEndereco" size="50" maxlength="50" />
+                <input type="text" name="txtNumero" size="15" maxlength="15" />
+            </p>
+            <p>Complemento:
+                <input type="text" name="txtComplemento" size="50" maxlength="50" />
+            </p>
+            <p>Bairro:
+                <input type="text" name="txtBairro" size="50" maxlength="50" />
+            </p>
+            <p>Cidade:
+                <input type="text" name="txtCidade" size="50" maxlength="50" />
+                Estado:
+                <select name="lstEstado">
+                    <option value="AC">Acre</option> 
+                    <option value="AL">Alagoas</option> 
+                    <option value="AM">Amazonas</option>
+                    <option value="BH">Bahia</option> 
+                    <option value="CE">Ceará</option> 
+                    <option value="DF">Distrito Federal</option> 
+                    <option value="GO">Goiás</option>
+                    <option value="MG">Minas Gerais</option>                    
+                    <option value="MT">Mato Grosso</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>                       
+                    <option value="TO">Tocantins</option>
+                </select>
+            </p>
+            <p>Telefone:
+                <input type="text" name="txtTelefone" size="20" maxlength="20" />
+            </p>
+            <p>Celular:
+                <input type="text" name="txtCelular" size="20" maxlength="20" />
+            </p>
+            <p>Numero CTPS:
+                <input type="text" name="txtCtps" size="20" maxlength="20" />
+            </p>
+            <p>Numero PIS:
+                <input type="text" name="txtPis" size="20" maxlength="20" />
+            </p>
+            <br>
+            <p><input type="submit" name="btnGravar" value="Gravar" />
+                <span class="LinkVoltar">
+                    <a href="javascript:history.back()">[Voltar]
+                    </a>
+                </span>
+            </p>
+
+        </form>
+        <p class="RodapePagina">Copyright(c) 2023</p> 
+    </body>
+</html>
