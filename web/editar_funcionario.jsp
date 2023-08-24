@@ -63,7 +63,9 @@
             <form name="formEditaFuncionario" method="post" action="atualizaFUncionario" target="_parent">
                 
                 <p>Nome do Funcionario:
-                    <input type="text" name="txtNomeFuncionario" size="50" maxlength="50"/>
+                    <input type="text" name="txtNomeFuncionario" size="50" maxlength="50"
+                           value="<%=Funcionario.getNomeCompleto()%>"/>
+                    
                 
             </form>
         <%} else {
