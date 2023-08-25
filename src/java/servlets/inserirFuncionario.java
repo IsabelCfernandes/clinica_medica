@@ -36,10 +36,6 @@ public class inserirFuncionario extends HttpServlet {
             funcionarios funcionario = new funcionarios();
 
             c_funcionarios Funcionario = new c_funcionarios(request.getParameter("txtNomeFuncionario"),
-                    request.getParameter("txtDiaNascimento"),
-                    request.getParameter("txtMesNascimento"),
-                    request.getParameter("txtAnoNascimento"),
-                    String.valueOf(request.getParameter("rbSexo").charAt(0)),
                     request.getParameter("txtRG"),
                     request.getParameter("txtOrgaoEmissor"),
                     request.getParameter("txtCPF"),
@@ -51,15 +47,19 @@ public class inserirFuncionario extends HttpServlet {
                     request.getParameter("lstEstado"),
                     request.getParameter("txtTelefone"),
                     request.getParameter("txtCelular"),
-                    request.getParameter("txtPis"),
-                    request.getParameter("txtCtps"));
+                    String.valueOf(request.getParameter("rbSexo").charAt(0)),
+                    request.getParameter("txtCTPS"),
+                    request.getParameter("txtPIS"),
+                    request.getParameter("txtDiaNascimento"),
+                    request.getParameter("txtMesNascimento"),
+                    request.getParameter("txtAnoNascimento"));
 
             if (conexao.abrirConexao()) {
                 funcionario.configurarConexao(conexao.obterConexao());
                 if (funcionario.inserirRegistro(Funcionario)) {
                     out.println("<h2>Funcionário Cadastrado com sucesso!</h2>");
                     out.println("<br><br><br><br>");
-                    out.println("<a href='menu_funcionario.html'>Voltar</a>");
+                    out.println("<a href='menu_funcionarios.html'>Voltar</a>");
                 } else {
                     out.println("Não foi possível cadastrar o Funcionário!");
                 }

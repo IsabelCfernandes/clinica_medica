@@ -10,7 +10,7 @@ import model.c_funcionarios;
 
 public class atualizarFuncionario extends HttpServlet {
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         PrintWriter out;
@@ -60,13 +60,18 @@ public class atualizarFuncionario extends HttpServlet {
                     out.println("<a href='menu_funcionario.html'>Voltar</a>");
                 } else {
                     out.println("Não foi possível cadastrar o Funcionário!");
+                    out.println("<a href='menu_funcionarios.html'>Voltar</a>");
+
                 }
             } else {
                 out.println("Não foi possível Conectar com o banco de dados!");
+                out.println("<a href='menu_funcionarios.html'>Voltar</a>");
+
             }
         } catch (Exception erro) {
             erro.printStackTrace();
             out.println("<h2>Erro do sistema: Processo de cadastro de Funcionário!</h2>");
+            out.println("<a href='menu_funcionarios.html'>Voltar</a>");
 
         }
 

@@ -146,6 +146,8 @@ public class funcionarios {
             if (!(strDataInvertida.equals("null"))) {
                 //receberá ainda aspas do bd.
                 strDataInvertida = "'" + strDataInvertida + "'";
+            }else{
+                
             }
 
             strComandoSQL = "UPDATE funcionarios SET Nome_Completo = '" + funcionario.getNomeCompleto()

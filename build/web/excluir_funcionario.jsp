@@ -51,19 +51,29 @@
                 Funcionario.setDataNascimento(Integer.toString(intDia), Integer.toString(intMes), Integer.toString(intAno));
                 Funcionario.setNomeCompleto(rsRegistro.getString("Nome_Completo"));
                 Funcionario.setSexo(rsRegistro.getString("Sexo"));
-                
+
                 conexao.fecharConexao();
                 blnConectado = true;
-                
-            }else{
-            out.println("<p>Falha na conexão com o banco de dados! </p>");
+
+            } else {
+                out.println("<p>Falha na conexão com o banco de dados! </p>");
             }
         %>
-        
-         <%  if (blnConectado) {%>
-        <p class="TituloAplicacao">SGC - Sistema de Gestão de Clínicas 1.0</p>
-        <p class="TituloPagina">Cadastro de Funcionários - Edição< / p >
-        <form name="formEditaFuncionario" method="post" action="atualizaFUncionario" target="_parent">
 
+        <%  if (blnConectado) {%>
+
+        <p class="TituloAplicacao">SGC - Sistema de Gestão de Clínicas 1.0</p>
+        <p class="TituloPagina">Exclusão de Funcionários - Exclusão< / p >
+        <form name="formExcluirFuncionario" method="post" action="excluirFuncionario" target="_parent">
+            <h2>Tem certeza que quer excluir o funcionário abaixo? <br></h2>
+            <p>Nome do Funcionário: <%=Funcionario.getNomeCompleto()%></p>
+            <p><input type="hidden" name="codigo_funcionario" value="<%=intCodigoFuncionario%>"/></p>
+            <br>
+             <p><input type="submit" name="btnExcluir" value="Excluir"/>
+            <span class="LinkVoltar"><a href="javascript:history.back()">[Voltar]</a></span>
+        </p>
+    </form>
+    <p class="RodapePagina">Copyright(c) 2023</p>
+    <%}%>
     </body>
 </html>

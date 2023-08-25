@@ -59,8 +59,8 @@
 
         <%  if (blnConectado) {%>
         <p class="TituloAplicacao">SGC - Sistema de Gestão de Clínicas 1.0</p>
-        <p class="TituloPagina">Cadastro de Funcionários - Edição< / p >
-        <form name="formEditaFuncionario" method="post" action="atualizaFUncionario" target="_parent">
+        <p class="TituloPagina">Cadastro de Funcionários - Edição</p >
+        <form name="formEditarFuncionario" method="post" action="atualizarFuncionario" target="_parent">
 
             <p>Nome do Funcionario:
                 <input type="text" name="txtNomeFuncionario" size="50" maxlength="50"
@@ -69,9 +69,9 @@
             <p>Data de Nascimento (dd/mm/aaaa):
                 <input type="text" name="txtDiaNascimento" size="2" maxlength="2"
                        value="<%=Funcionario.getDiaNascimento()%>"/>
-                <input type="text" name="txtDiaNascimento" size="2" maxlength="2"
+                <input type="text" name="txtMesNascimento" size="2" maxlength="2"
                        value="<%=Funcionario.getMesNascimento()%>"/>
-                <input type="text" name="txtDiaNascimento" size="4" maxlength="4"
+                <input type="text" name="txtAnoNascimento" size="4" maxlength="4"
                        value="<%=Funcionario.getAnoNascimento()%>"/>
 
                 <%
@@ -140,7 +140,7 @@
             <input type="text" name="txtCTPS" size="50" maxlength="50"
                    value="<%=Funcionario.getNumeroCTPS()%>"/>
 
-            - Celular:
+            - PIS:
             <input type="text" name="txtPIS" size="12" maxlength="12"
                    value="<%=Funcionario.getNumeroPIS()%>"/>
         </p>

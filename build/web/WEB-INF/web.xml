@@ -28,6 +28,10 @@
         <servlet-name>atualizarFuncionario</servlet-name>
         <servlet-class>servlets.atualizarFuncionario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>excluirFuncionario</servlet-name>
+        <servlet-class>servlets.excluirFuncionario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inserirUsuario</servlet-name>
         <url-pattern>/inserirUsuario</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>atualizarFuncionario</servlet-name>
         <url-pattern>/atualizarFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>excluirFuncionario</servlet-name>
+        <url-pattern>/excluirFuncionario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
