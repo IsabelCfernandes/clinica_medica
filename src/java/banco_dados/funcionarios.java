@@ -50,7 +50,7 @@ public class funcionarios {
 
             strComandoSQL = "INSERT INTO funcionarios (Nome_Completo, Numero_RG, Orgao_Emissor,"
                     + "Numero_CPF, Endereco, Numero, Complemento, Bairro, Cidade, Estado, Telefone,"
-                    + "Celular, Numero_CTPS, Numero_Pis, Sexo, Data_Nascimento)"
+                    + "Celular, Numero_CTPS, Numero_PIS, Sexo, Data_Nascimento)"
                     + "VALUES('" + funcionario.getNomeCompleto() + "',"
                     + "'" + funcionario.getNumeroRG() + "',"
                     + "'" + funcionario.getOrgaoEmissor() + "',"
@@ -146,15 +146,13 @@ public class funcionarios {
             if (!(strDataInvertida.equals("null"))) {
                 //receberá ainda aspas do bd.
                 strDataInvertida = "'" + strDataInvertida + "'";
-            }else{
-                
             }
 
             strComandoSQL = "UPDATE funcionarios SET Nome_Completo = '" + funcionario.getNomeCompleto()
                     + "',"
-                    + "Numero_rg = '" + funcionario.getNumeroRG() + "',"
-                    + "Orgão_emissor = '" + funcionario.getOrgaoEmissor() + "',"
-                    + "Numero_cpf = '" + funcionario.getNumeroCPF() + "',"
+                    + "Numero_RG = '" + funcionario.getNumeroRG() + "',"
+                    + "Orgao_Emissor = '" + funcionario.getOrgaoEmissor() + "',"
+                    + "Numero_CPF = '" + funcionario.getNumeroCPF() + "',"
                     + "Endereco = '" + funcionario.getEndereco() + "',"
                     + "Numero = '" + funcionario.getNumero() + "',"
                     + "Complemento = '" + funcionario.getComplemento() + "',"
@@ -162,15 +160,17 @@ public class funcionarios {
                     + "Cidade = '" + funcionario.getCidade() + "',"
                     + "Telefone = '" + funcionario.getTelefone() + "',"
                     + "Celular = '" + funcionario.getCelular() + "',"
-                    + "Numero_ctps = '" + funcionario.getNumeroCTPS() + "',"
-                    + "Numero_pis = '" + funcionario.getNumeroPIS() + "',"
+                    + "Numero_CTPS = '" + funcionario.getNumeroCTPS() + "',"
+                    + "Numero_PIS = '" + funcionario.getNumeroPIS() + "',"
                     + "Sexo = '" + funcionario.getSexo() + "',"
                     + "Data_Nascimento = " + strDataInvertida
                     + "WHERE Codigo_Funcionario = " + funcionario.getCodigoFuncionario();
 
             psComando = conBanco.prepareStatement(strComandoSQL);
             psComando.executeUpdate();
+            
             return true;
+            
         } catch (Exception erro) {
             erro.printStackTrace();
             return false;
@@ -184,7 +184,7 @@ public class funcionarios {
         String strComandoSQL;
 
         try {
-            strComandoSQL = "DELETE FROM funcionarios WHERE registro_Usuario = " + intCodigoFuncionario;
+            strComandoSQL = "DELETE FROM funcionarios WHERE Codigo_Funcionario = " + intCodigoFuncionario;
             psComando = conBanco.prepareStatement(strComandoSQL);
             psComando.executeUpdate();
             return true;

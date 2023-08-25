@@ -48,8 +48,8 @@ public class inserirFuncionario extends HttpServlet {
                     request.getParameter("txtTelefone"),
                     request.getParameter("txtCelular"),
                     String.valueOf(request.getParameter("rbSexo").charAt(0)),
-                    request.getParameter("txtCTPS"),
-                    request.getParameter("txtPIS"),
+                    request.getParameter("txtCtps"),
+                    request.getParameter("txtPis"),
                     request.getParameter("txtDiaNascimento"),
                     request.getParameter("txtMesNascimento"),
                     request.getParameter("txtAnoNascimento"));

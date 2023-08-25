@@ -23,6 +23,7 @@
             c_funcionarios Funcionario = new c_funcionarios();
             int intCodigoFuncionario = Integer.parseInt(request.getParameter("codigo_funcionario"));
             blnConectado = false;
+            
             if (conexao.abrirConexao()) {
                 funcionario.configurarConexao(conexao.obterConexao());
                 rsRegistro = funcionario.lerRegistro(intCodigoFuncionario);
@@ -137,11 +138,11 @@
                    value="<%=Funcionario.getCelular()%>"/>
         </p>
         <p>CTPS:
-            <input type="text" name="txtCTPS" size="50" maxlength="50"
+            <input type="text" name="txtCtps" size="50" maxlength="50"
                    value="<%=Funcionario.getNumeroCTPS()%>"/>
 
             - PIS:
-            <input type="text" name="txtPIS" size="12" maxlength="12"
+            <input type="text" name="txtPis" size="12" maxlength="12"
                    value="<%=Funcionario.getNumeroPIS()%>"/>
         </p>
         <p><input type="hidden" name="codigo_funcionario" size="50" maxlength="50"
