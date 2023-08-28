@@ -69,7 +69,6 @@ public class inserirFuncionario extends HttpServlet {
         } catch (Exception erro) {
             erro.printStackTrace();
             out.println("<h2>Erro do sistema: Processo de cadastro de Funcionário!</h2>");
-
         }
 
         out.println("<p class='RodapePagina'>Copyright(c) 2023</p>");

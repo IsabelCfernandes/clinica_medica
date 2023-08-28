@@ -32,6 +32,14 @@
         <servlet-name>excluirFuncionario</servlet-name>
         <servlet-class>servlets.excluirFuncionario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>inserirEspecialidade</servlet-name>
+        <servlet-class>servlets.inserirEspecialidade</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>atualizarEspecialidade</servlet-name>
+        <servlet-class>servlets.atualizarEspecialidade</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inserirUsuario</servlet-name>
         <url-pattern>/inserirUsuario</url-pattern>
@@ -63,6 +71,14 @@
     <servlet-mapping>
         <servlet-name>excluirFuncionario</servlet-name>
         <url-pattern>/excluirFuncionario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>inserirEspecialidade</servlet-name>
+        <url-pattern>/inserirEspecialidade</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>atualizarEspecialidade</servlet-name>
+        <url-pattern>/atualizarEspecialidade</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

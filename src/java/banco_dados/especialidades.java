@@ -54,7 +54,7 @@ public class especialidades {
     bem-sucedida, o método retorna true, caso contrário, ele captura 
     exceções (erros) e retorna false, imprimindo o rastreamento do erro.
      */
-    public boolean inserirRegitro(String strDescricao) {
+    public boolean inserirRegistro(String strDescricao) {
         String strComandoSQL;
 
         try {
@@ -97,7 +97,7 @@ public class especialidades {
         }
     }
 
-    public ResultSet listarRegistro(String strOrdem) {
+    public ResultSet listarRegistros(String strOrdem) {
         String strComandoSQL;
 
         try {
@@ -109,6 +109,27 @@ public class especialidades {
             psComando = conBanco.prepareStatement(strComandoSQL);
             rsRegistros = psComando.executeQuery();
             return rsRegistros;
+        } catch (Exception erro) {
+            erro.printStackTrace();
+            return null;
+        }
+    }
+    
+    
+    //METODO LER REGISTRO
+    public ResultSet lerRegistro(int intCodigoEspecialidade) {
+        String strComandoSQL;
+
+        try {
+            strComandoSQL = "SELECT * FROM especialidades WHERE Codigo_Especialidade = "
+                    + intCodigoEspecialidade;
+
+            psComando = conBanco.prepareStatement(strComandoSQL);
+            rsRegistros = psComando.executeQuery();
+            rsRegistros.next();
+
+            return rsRegistros;
+
         } catch (Exception erro) {
             erro.printStackTrace();
             return null;
