@@ -40,6 +40,10 @@
         <servlet-name>atualizarEspecialidade</servlet-name>
         <servlet-class>servlets.atualizarEspecialidade</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>excluirEspecialidade</servlet-name>
+        <servlet-class>servlets.excluirEspecialidade</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inserirUsuario</servlet-name>
         <url-pattern>/inserirUsuario</url-pattern>
@@ -79,6 +83,10 @@
     <servlet-mapping>
         <servlet-name>atualizarEspecialidade</servlet-name>
         <url-pattern>/atualizarEspecialidade</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>excluirEspecialidade</servlet-name>
+        <url-pattern>/excluirEspecialidade</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -16,14 +16,35 @@
             ResultSet rsRegistro;
             boolean blnConectado;
             String strDescricao = "";
-            int intCodigoEspecialidade = Integer.parseInt((request.getParameter("codigo_especialidade")));
+            int intCodigoEspecialidade = Integer.parseInt((request.getParameter("Codigo")));
+            blnConectado = false;
 
-            if(conexao.abrirConexao()){
-            
-            
+            if (conexao.abrirConexao()) {
+                especialidade.configurarConexao(conexao.obterConexao());
+                rsRegistro = especialidade.lerRegistro(intCodigoEspecialidade);
+                strDescricao = rsRegistro.getString("Descricao_Especialidade");
+                conexao.fecharConexao();
+                blnConectado = true;
+            } else {
+                out.println("<p>Falha na Conexão com o Banco de dados!</p>");
             }
 
         %>
+
+        <%  if (blnConectado) {%>
+        <p class="TituloAplicacao">SGC - Sistema de Gestão de Clínicas 1.0</p>
+        <p class="TituloPagina">Exclusão de Especialidade< / p >
+        <form name="formExcluirEspecialidade" method="post" action="excluirEspecialidade" target="_parent">
+            <p>Especialidade: <%=strDescricao%></p>
+            <p><input type="hidden" name="codigo_especialidade" value="<%=intCodigoEspecialidade%>"/></p>
+            <br>
+            <p><input type="submit" name="btnExcluir" value="Excluir"/>
+                <span class="LinkVoltar"><a href="javascript:history.back()">[Voltar]</a></span>
+            </p>
+
+        </form>
+        <%}%>
+
 
     </body>
 </html>

@@ -87,7 +87,7 @@ public class especialidades {
         String strComandoSQL;
 
         try {
-            strComandoSQL = "DELETE FROM especialidades WHERE Descricao_Especialidade = '" + intCodigo;
+            strComandoSQL = "DELETE FROM especialidades WHERE Codigo_Especialidade = " + intCodigo;
             psComando = conBanco.prepareStatement(strComandoSQL);
             psComando.execute();
             return true;

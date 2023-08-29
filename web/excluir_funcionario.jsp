@@ -69,11 +69,11 @@
             <p>Nome do Funcionário: <%=Funcionario.getNomeCompleto()%></p>
             <p><input type="hidden" name="codigo_funcionario" value="<%=intCodigoFuncionario%>"/></p>
             <br>
-             <p><input type="submit" name="btnExcluir" value="Excluir"/>
-            <span class="LinkVoltar"><a href="javascript:history.back()">[Voltar]</a></span>
-        </p>
-    </form>
-    <p class="RodapePagina">Copyright(c) 2023</p>
-    <%}%>
+            <p><input type="submit" name="btnExcluir" value="Excluir"/>
+                <span class="LinkVoltar"><a href="javascript:history.back()">[Voltar]</a></span>
+            </p>
+        </form>
+        <p class="RodapePagina">Copyright(c) 2023</p>
+        <%}%>
     </body>
 </html>
